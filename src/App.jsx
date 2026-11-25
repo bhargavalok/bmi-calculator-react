@@ -11,7 +11,7 @@ const App = () => {
     e.preventDefault();
     const weightValue = Number(weight);
     const heightValue = Number(height);
-    const heightMeter = height/100;
+    const heightMeter = heightValue * 0.0254;
 
     if (
       weight.trim() === "" ||
@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-slate-300 flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-white p-6 rounded-2xl shadow-lg">
         <h2 className="text-2xl font-bold text-center mb-6">BMI Calculator</h2>
 
@@ -68,7 +68,7 @@ const App = () => {
           </div>
 
           <div>
-            <label className="block mb-2 font-medium">Height (inches):</label>
+            <label className="block mb-2 font-medium">Height (cm):</label>
 
             <input
               type="number"
