@@ -11,7 +11,7 @@ const App = () => {
     e.preventDefault();
     const weightValue = Number(weight);
     const heightValue = Number(height);
-    const heightMeter = heightValue * 0.0254;
+    const heightMeter = heightValue / 100;
 
     if (
       weight.trim() === "" ||
